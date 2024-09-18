@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-permission` will be documented in this file
 
+## 1.0.0 - 2024-09-18
+
+### What's Changed
+
+* Add compatiblity package to mongodb v5 database on laravel 11. by @gagapolojr
+
+## RESET THE VERSIONING FROM FORKING
+
 ## 6.9.0 - 2024-06-22
 
 ### What's Changed
