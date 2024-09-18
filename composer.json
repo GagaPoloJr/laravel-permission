@@ -1,6 +1,6 @@
 {
-    "name": "spatie/laravel-permission",
-    "description": "Permission handling for Laravel 8.0 and up",
+    "name": "gagapolojr/laravel-permission-mongodb",
+    "description": "Forked from spatie/laravel-permission. this package for handler mongodb purpose on laravel 11",
     "license": "MIT",
     "keywords": [
         "spatie",
@@ -10,12 +10,13 @@
         "roles",
         "acl",
         "rbac",
-        "security"
+        "security",
+        "mongodb"
     ],
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
+            "name": "M Haikal Rahmadi",
+            "email": "rahmadiihaikal@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
