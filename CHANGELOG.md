@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-permission` will be documented in this file
 
+## 1.0.1 - 2024-10-10
+
+### What's Changed
+
+* add the syncPermissionsRoles function can handler on mongodb data. by @gagapolojr
+
 ## 1.0.0 - 2024-09-18
 
 ### What's Changed

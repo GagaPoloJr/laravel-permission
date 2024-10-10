@@ -452,6 +452,29 @@ trait HasPermissions
     }
 
     /**
+     * Remove all current permissions and set the given ones.
+     *
+     * @param  string|int|array|Permission|Collection|\BackedEnum  $permissions
+     * @return $this
+     */
+    public function syncPermissionsRoles(...$permissions)
+    {
+        if ($this->getModel()->exists) {
+            // Convert permissions into a collection or array format suitable for MongoDB
+            $permissions = $this->collectPermissions($permissions);
+            
+            // Instead of detach, clear the current permissions (MongoDB specific)
+            $this->permissions()->update(['permissions' => []]);
+
+            // Set an empty collection or array for the permissions relation
+            $this->setRelation('permissions', collect());
+        }
+
+        // Use givePermissionTo to assign the new set of permissions
+        return $this->givePermissionTo($permissions);
+    }
+
+    /**
      * Revoke the given permission(s).
      *
      * @param  Permission|Permission[]|string|string[]|\BackedEnum  $permission
